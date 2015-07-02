@@ -1,10 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayerMove : MonoBehaviour
+public class EnemyMove : MonoBehaviour
 {
 
-    public float Speed = 5f;
+    public float Speed = 2f;
     private float moveX = 0f;
     private float moveY = 0f;
 
@@ -17,8 +17,12 @@ public class PlayerMove : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        moveX = Input.GetAxis("Horizontal");
-        moveY = Input.GetAxis("Vertical");
+        moveX = -1;
         GetComponent<Rigidbody2D>().velocity = new Vector2(moveX * Speed, moveY * Speed);
+    }
+
+    void OnCollisionEnter2D(Collision2D col)
+    {
+      
     }
 }

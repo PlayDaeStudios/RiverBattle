@@ -5,10 +5,11 @@ public class GibOnTrigger : MonoBehaviour {
 
     public GameObject gib;
 
-    void OnTriggerEnter()
+    void OnTriggerEnter2D()
     {
-        Instantiate(gib, transform.position, Quaternion.identity);
-        Destroy(gameObject);
+            Instantiate(gib, transform.position, Quaternion.identity);
+            Destroy(gameObject);
+        
     }
 
 

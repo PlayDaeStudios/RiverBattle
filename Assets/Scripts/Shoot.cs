@@ -3,8 +3,8 @@ using System.Collections;
 
 public class Shoot : MonoBehaviour {
 
-    public GameObject bullet; 
-   
+    public GameObject bullet;
+ 
 	// Use this for initialization
 	void Start () {
 	
@@ -17,4 +17,5 @@ public class Shoot : MonoBehaviour {
             Instantiate(bullet, transform.position, transform.rotation);
         }
 	}
+   
 }
